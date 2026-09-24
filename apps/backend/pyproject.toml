@@ -8,9 +8,25 @@ dependencies = [
     "fastapi[standard]>=0.141.1",
     "langchain>=1.4.0",
     "langchain-google-genai>=4.4.0",
+    "langchain-text-splitters>=1.1.2",
     "langgraph>=1.2.11",
+    "pathspec>=1.1.1",
+    "pgvector>=0.5.0",
+    "psycopg[binary]>=3.3.6",
     "python-dotenv>=1.2.3",
+    "tiktoken>=0.14.0",
 ]
 
+[project.scripts]
+fabric = "app.cli.main:main"
+
+[build-system]
+requires = ["uv_build>=0.12.2,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-root = "."
+module-name = "app"
+
 [tool.uv]
-package = false
+package = true

@@ -1,3 +1,3 @@
-from app.agents.research_agent import research_agent
+from app.agents.research_agent import ResearchAgent
 
-__all__ = ["research_agent"]
+__all__ = ["ResearchAgent"]
